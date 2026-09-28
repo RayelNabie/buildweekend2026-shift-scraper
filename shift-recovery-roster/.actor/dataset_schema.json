@@ -1,7 +1,6 @@
 {
     "actorSpecification": 1,
     "fields": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
         "title": "Normalized roster record",
         "type": "object",
         "required": ["recordType", "source", "retrievedAt"],
@@ -13,7 +12,7 @@
             },
             "source": {
                 "type": "string",
-                "description": "Origin of the record as a whole: cal.com, workforce-metadata, demo-workforce-metadata or demo."
+                "description": "Origin of the record as a whole: cal.com, ical, workforce-metadata, demo-workforce-metadata or demo."
             },
             "retrievedAt": {
                 "type": "string",
@@ -26,7 +25,7 @@
             },
             "fieldSources": {
                 "type": "object",
-                "description": "Per-field provenance map. Values are cal.com, workforce-metadata, demo-workforce-metadata, or derived:<basis>.",
+                "description": "Per-field provenance map. Values are cal.com, ical, workforce-metadata, demo-workforce-metadata, or derived:<basis>.",
                 "additionalProperties": { "type": "string" }
             },
             "employeeId": { "type": ["string", "null"], "description": "Stable worker identifier." },
